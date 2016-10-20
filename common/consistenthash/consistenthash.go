@@ -18,11 +18,7 @@ type Ring struct {
 // search will find the index of the node that is responsible for the range that
 // includes the hashed value of key.
 func (r *Ring) search(key string) int {
-    /////////////////////////
-    // YOUR CODE GOES HERE //
-    /////////////////////////
-
-    return 0
+    return int(hashId(key))% r.Nodes.Len();
 }
 
 // NewRing will create a new Ring object and return a pointer to it.
